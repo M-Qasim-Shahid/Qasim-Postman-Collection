@@ -1,0 +1,1187 @@
+{
+	"info": {
+		"_postman_id": "a6c6daf9-3346-481b-952f-d137a57f9b0f",
+		"name": "Login/Signup",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"qasim\",\r\n    \"email\": \"qasim3@gmail.com\",\r\n    \"password\":\"qasim\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/users/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"qasim\",\r\n    \"email\": \"qasim77@gmail.com\",\r\n    \"password\":\"qasim\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/users/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "44"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2c-VSEoqLVrHmy+f+fXxQ1FdCxwZbc\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 30 Mar 2022 07:29:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"qasim\",\n    \"email\": \"qasim77@gmail.com\"\n}"
+				},
+				{
+					"name": "Register(Already Registered)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"qasim\",\r\n    \"email\": \"qasim77@gmail.com\",\r\n    \"password\":\"qasim\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/users/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "36"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"24-7p7rMKSQEWgZDet6ZOmQkeMPlS4\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 30 Mar 2022 07:30:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "User with given Email already exists"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"qasim123@gmail.com\",\r\n    \"password\":\"qasim\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"zaid123@gmail.com\",\r\n    \"password\":\"zaid11\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/users/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "168"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a8-9ua0qpkHdxoTO0Nto4w7pOYBJ0U\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 30 Mar 2022 07:31:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQzZmExNjMwNzgwZTlhNDE5MWY1YjEiLCJuYW1lIjoiemFpZCIsImlhdCI6MTY0ODYyNTUwMH0.DxnpEdY5Kz9msrghw3QbATD2dxlMI7qrCBFYPbs4S9Y"
+				},
+				{
+					"name": "Login(Not Registered)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"zaid1@gmail.com\",\r\n    \"password\":\"zaid11\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/users/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "19"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"13-m+zYbYHpkTCGKj8bItH5es0MkBY\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 30 Mar 2022 07:32:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "User Not Registered"
+				}
+			]
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQyY2VlNTczNTY0YzY2NTQ4NTM5ZTkiLCJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2NDg2MjEzNDZ9.mgn9r_qdYD5FSELWLX2nm_olofMI4QUqWLHXsZQ2UOU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "admin@admin.com",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "6988",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "qasim",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/users/62429dcfaafb7a72c40baa01",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"62429dcfaafb7a72c40baa01"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete User(Displayed)",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQyY2VlNTczNTY0YzY2NTQ4NTM5ZTkiLCJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2NDg2MjEzNDZ9.mgn9r_qdYD5FSELWLX2nm_olofMI4QUqWLHXsZQ2UOU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/api/users/624406eb7efd4a10a2aa1ed9",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"624406eb7efd4a10a2aa1ed9"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "173"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ad-Pr/QMCC1jliCoUbCon+JgT4k1zM\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 30 Mar 2022 07:33:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"624406eb7efd4a10a2aa1ed9\",\n    \"role\": \"user\",\n    \"name\": \"qasim\",\n    \"email\": \"qasim77@gmail.com\",\n    \"password\": \"$2a$10$VILA9qDxipLqwI9jCRgk9OTJw75E3AUc/.5/zzIr710Emi88qHjOm\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQyY2VlNTczNTY0YzY2NTQ4NTM5ZTkiLCJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2NDg2MjEzNDZ9.mgn9r_qdYD5FSELWLX2nm_olofMI4QUqWLHXsZQ2UOU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "admin@admin.com",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "6988",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "qasim",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/users/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Users",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQyY2VlNTczNTY0YzY2NTQ4NTM5ZTkiLCJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2NDg2MjEzNDZ9.mgn9r_qdYD5FSELWLX2nm_olofMI4QUqWLHXsZQ2UOU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "admin@admin.com",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "6988",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "qasim",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/users/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "694"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2b6-X8PlLPWfEeweT/rtso45mX52F/g\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 30 Mar 2022 07:27:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"6242cee573564c66548539e9\",\n        \"role\": \"admin\",\n        \"name\": \"admin\",\n        \"email\": \"admin@admin.com\",\n        \"password\": \"$2a$10$.vIwa4WkP4zC5bdt7tSqCOQCp9wsb6l9.X2dFgiPoGQ3SMorWihzW\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6242f04f5b550f2056bf156e\",\n        \"role\": \"user\",\n        \"email\": \"qasim123@gmail.com\",\n        \"password\": \"$2a$10$p93eV/2a8oC1acz5Mt/LPeXUTZBFOGArL0jZ2fdYUACd6j2CIhL.W\",\n        \"__v\": 0,\n        \"name\": \"QAS\"\n    },\n    {\n        \"_id\": \"6243fa1630780e9a4191f5b1\",\n        \"role\": \"admin\",\n        \"name\": \"zaid\",\n        \"email\": \"zaid123@gmail.com\",\n        \"password\": \"$2a$10$1NN8DSVbd4rJKvLWKiXi0O6blgZMqXBHJaxa1uik3fS9xhvhTWcKK\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"624400b6a60063b96d88b8e2\",\n        \"role\": \"user\",\n        \"name\": \"QASIM\",\n        \"email\": \"qasim5@gmail.com\",\n        \"password\": \"$2a$10$jNnpLRUjNLsNjs.b1zMt..7aD.5Pb7BGnAopqwmosshErgWFHhwlC\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get Users Per Page",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQyY2VlNTczNTY0YzY2NTQ4NTM5ZTkiLCJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2NDg2MjEzNDZ9.mgn9r_qdYD5FSELWLX2nm_olofMI4QUqWLHXsZQ2UOU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "admin@admin.com",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "6988",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "qasim",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/users?page=1&perPage=2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "perPage",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Users(Page:1, Per Page:2)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQyY2VlNTczNTY0YzY2NTQ4NTM5ZTkiLCJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2NDg2MjEzNDZ9.mgn9r_qdYD5FSELWLX2nm_olofMI4QUqWLHXsZQ2UOU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "admin@admin.com",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "6988",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "qasim",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/users?page=1&perPage=2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "perPage",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "347"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"15b-DOQH5GriwpoIXiMjaO8QS7RHAX4\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 30 Mar 2022 07:25:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"6242cee573564c66548539e9\",\n        \"role\": \"admin\",\n        \"name\": \"admin\",\n        \"email\": \"admin@admin.com\",\n        \"password\": \"$2a$10$.vIwa4WkP4zC5bdt7tSqCOQCp9wsb6l9.X2dFgiPoGQ3SMorWihzW\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6242f04f5b550f2056bf156e\",\n        \"role\": \"user\",\n        \"email\": \"qasim123@gmail.com\",\n        \"password\": \"$2a$10$p93eV/2a8oC1acz5Mt/LPeXUTZBFOGArL0jZ2fdYUACd6j2CIhL.W\",\n        \"__v\": 0,\n        \"name\": \"QAS\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Update User Credentials",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQyY2VlNTczNTY0YzY2NTQ4NTM5ZTkiLCJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2NDg2MjEzNDZ9.mgn9r_qdYD5FSELWLX2nm_olofMI4QUqWLHXsZQ2UOU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"name\": \"Qasim Shahid\",\r\n    \"email\": \"qasim123@gmail.com\",\r\n    \"password\":\"qasim\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/users/6242f04f5b550f2056bf156e",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"6242f04f5b550f2056bf156e"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update User Credentials",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQyY2VlNTczNTY0YzY2NTQ4NTM5ZTkiLCJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2NDg2MjEzNDZ9.mgn9r_qdYD5FSELWLX2nm_olofMI4QUqWLHXsZQ2UOU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"name\": \"Qasim Ch\",\r\n    \"email\": \"qasim123@gmail.com\",\r\n    \"password\":\"qasim\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/users/6242f04f5b550f2056bf156e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"6242f04f5b550f2056bf156e"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"30-X8kGqyaMuZb6bciYeDw7IkObmBY\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 30 Mar 2022 07:36:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Qasim Ch\",\n    \"email\": \"qasim123@gmail.com\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Insert User By Admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQyY2VlNTczNTY0YzY2NTQ4NTM5ZTkiLCJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2NDg2MjEzNDZ9.mgn9r_qdYD5FSELWLX2nm_olofMI4QUqWLHXsZQ2UOU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"name\": \"QASIM\",\r\n    \"email\": \"qasim5@gmail.com\",\r\n    \"password\":\"qasim\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/users/insert",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"insert"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Insert User By Admin",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQyY2VlNTczNTY0YzY2NTQ4NTM5ZTkiLCJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2NDg2MjEzNDZ9.mgn9r_qdYD5FSELWLX2nm_olofMI4QUqWLHXsZQ2UOU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"name\": \"ALI\",\r\n    \"email\": \"ali5@gmail.com\",\r\n    \"password\":\"ali\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/users/insert",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"insert"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "39"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"27-4GxVW1d/JlfXWG6h+6mez9HLI9g\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 30 Mar 2022 07:38:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"ALI\",\n    \"email\": \"ali5@gmail.com\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get OTP For Password Change",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQzZmExNjMwNzgwZTlhNDE5MWY1YjEiLCJuYW1lIjoiemFpZCIsImlhdCI6MTY0ODYyMjgzMH0.oi1vQXMBjuBw9MGonfFRgHUlTYPMzA9K-b2543yUA8I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "zaid123@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/users/change-password-otp",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"change-password-otp"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get OTP For Password Change",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQzZmExNjMwNzgwZTlhNDE5MWY1YjEiLCJuYW1lIjoiemFpZCIsImlhdCI6MTY0ODYyMjgzMH0.oi1vQXMBjuBw9MGonfFRgHUlTYPMzA9K-b2543yUA8I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "zaid123@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/users/change-password-otp",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"change-password-otp"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "186"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ba-+eRMIABJy0nuUECQELOsjW3g0Kk\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 30 Mar 2022 07:39:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"624409167efd4a10a2aa1ef2\",\n    \"email\": \"zaid123@gmail.com\",\n    \"code\": \"127\",\n    \"expireIn\": 1648626242873,\n    \"createdAt\": \"2022-03-30T07:39:02.877Z\",\n    \"updatedAt\": \"2022-03-30T07:39:02.877Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Password Change",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQzZmExNjMwNzgwZTlhNDE5MWY1YjEiLCJuYW1lIjoiemFpZCIsImlhdCI6MTY0ODYyMjgzMH0.oi1vQXMBjuBw9MGonfFRgHUlTYPMzA9K-b2543yUA8I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "zaid123@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "zaid",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "zaid11",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "9147",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/users/change-password",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"change-password"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Password Change",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQzZmExNjMwNzgwZTlhNDE5MWY1YjEiLCJuYW1lIjoiemFpZCIsImlhdCI6MTY0ODYyMjgzMH0.oi1vQXMBjuBw9MGonfFRgHUlTYPMzA9K-b2543yUA8I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "zaid123@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "zaid",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "zaid23",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "127",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/users/change-password",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"change-password"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "28"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1c-PutvH7BQrSqlxx8lzMuIWuaET7s\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 30 Mar 2022 07:39:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Password Changed Successfuly"
+				}
+			]
+		}
+	]
+}
